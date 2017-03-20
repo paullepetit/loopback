@@ -1,0 +1,63 @@
+{
+  "name": "tenants",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID": {
+      "type": "number",
+      "required": true,
+      "length": 10,
+      "mysql": {
+        "columnName": "ID",
+        "dataType": "INT",
+        "dataLength": 10,
+        "nullable": "N"
+      }
+    },
+    "UUDI": {
+      "type": "number",
+      "required": true,
+      "length": 37,     
+      "mysql": {
+        "columnName": "UUDI",
+        "dataType": "VARCHAR",
+        "dataLength": 37
+      }
+    },
+    "shortname": {
+      "type": "string",
+      "required": true,
+      "length": 45,
+      "mysql": {
+        "columnName": "SHORTNAME",
+        "dataType": "VARCHAR",
+        "dataLength": 45
+      }
+    },
+    "fullname": {
+      "type": "string",
+      "required": true,
+      "length": 255,
+      "mysql": {
+        "columnName": "FULLNAME",
+        "dataType": "VARCHAR",
+        "dataLength": 255
+     }
+    },
+    "create-date": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now",
+      "mysql": {
+        "columnName": "create-date",
+        "dataType": "DATETIME"
+     }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

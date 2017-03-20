@@ -1,0 +1,38 @@
+{
+  "name": "tenants",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID": {
+      "type": "number",
+      "required": true,
+      "length": 10,
+    },
+    "UUDI": {
+      "type": "number",
+      "required": true,
+      "length": 37,     
+    },
+    "shortname": {
+      "type": "string",
+      "required": true,
+      "length": 45,
+    },
+    "fullname": {
+      "type": "string",
+      "required": true,
+      "length": 255,
+    },
+    "create-date": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now",
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
