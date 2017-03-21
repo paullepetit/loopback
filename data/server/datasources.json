@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "tenants": {
+    "host": "loopback-db",
+    "port": 3306,
+    "url": "",
+    "database": "lbdb",
+    "password": "root@MDP",
+    "name": "tenants",
+    "user": "root",
+    "connector": "mysql"
   }
 }

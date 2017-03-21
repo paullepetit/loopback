@@ -36,7 +36,7 @@
     "public": false
   },
   "tenants": {
-    "dataSource": "db",
+    "dataSource": "tenants",
     "public": true
   }
 }

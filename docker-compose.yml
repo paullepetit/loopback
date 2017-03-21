@@ -2,24 +2,29 @@ version : '3'
 services :
   web:
     build : .
-    container_name : srv-loopback
+    container_name : loopback-ap
     links :
       - sql
     ports :
       - 80:80
-      - 8080:8080
       - 3000:3000
-    
+      - 443:443
+    volumes :
+     - ./data:/usr/src/app/
+    environment:
+      MYSQL_ROOT_PASSWORD : root@MDP
+      MYSQL_ROOT_LOGIN : root
+      MYSQL_HOST : loopback-db
+
   sql:
     image : mysql:5.7
-    container_name : srv-loopback-db
+    container_name : loopback-db
     ports : 
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD : ApQm@2017!
-      MYSQL_DATABASE : loopback-db
+      MYSQL_ROOT_PASSWORD : root@MDP
+      MYSQL_DATABASE : lbdb
       MYSQL_USERNAME : loopusr
       MYSQL_PASSWORD : loopmdp
     volumes : 
-      - ./sql:/docker-entrypoint.sql/
-    
+      - ./sql/:/docker-entrypoint-initdb.d/

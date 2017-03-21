@@ -8,28 +8,24 @@
   "properties": {
     "ID": {
       "type": "number",
-      "required": true,
-      "length": 10,
+      "required": true
     },
     "UUDI": {
       "type": "number",
-      "required": true,
-      "length": 37,     
+      "required": true
     },
-    "shortname": {
+    "SHORTNAME": {
       "type": "string",
-      "required": true,
-      "length": 45,
+      "required": true
     },
-    "fullname": {
+    "FULLNAME": {
       "type": "string",
-      "required": true,
-      "length": 255,
+      "required": true
     },
     "create-date": {
       "type": "date",
-      "required": true,
-      "defaultFn": "now",
+      "required": true
+    }
   },
   "validations": [],
   "relations": {},
